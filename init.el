@@ -26,6 +26,9 @@
 ;; font
 (add-to-list 'default-frame-alist '(font . "Iosevka Nerd Font-15"))
 
+;; which key
+(which-key-mode 1)
+
 ;; enable pair completion
 (electric-pair-mode)
 
