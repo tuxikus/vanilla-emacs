@@ -39,6 +39,7 @@
 
 ;; keys
 (global-set-key (kbd "C-c d") 'duplicate-line)
-(global-set-key (kbd "C-c f") 'find-file)
+(global-set-key (kbd "C-c f f") 'find-file)
 (global-set-key (kbd "C-c e r") 'eval-region)
 (global-set-key (kbd "C-c e b") 'eval-buffer)
+(global-set-key (kbd "C-c w m") 'whitespace-mode)
