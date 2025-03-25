@@ -1,5 +1,1 @@
 * Vanilla Emacs - a simple Emacs config
-
-#+begin_src
-
-#+end_src
