@@ -24,10 +24,10 @@
 (fset 'yes-or-no-p 'y-or-n-p)
 
 ;; font
-(add-to-list 'default-frame-alist '(font . "Iosevka Nerd Font-15"))
+;; (add-to-list 'default-frame-alist '(font . "Iosevka Nerd Font-15"))
 
 ;; which key
-(which-key-mode 1)
+;; (which-key-mode 1)
 
 ;; enable pair completion
 (electric-pair-mode)
