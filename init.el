@@ -46,3 +46,6 @@
 (global-set-key (kbd "C-c e r") 'eval-region)
 (global-set-key (kbd "C-c e b") 'eval-buffer)
 (global-set-key (kbd "C-c w m") 'whitespace-mode)
+(global-set-key (kbd "C-x c") 'compile)
+(global-set-key (kbd "C-S-a") 'beginning-of-buffer)
+(global-set-key (kbd "C-S-e") 'end-of-buffer)
