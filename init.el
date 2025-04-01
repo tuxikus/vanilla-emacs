@@ -49,3 +49,6 @@
 (global-set-key (kbd "C-x c") 'compile)
 (global-set-key (kbd "C-S-a") 'beginning-of-buffer)
 (global-set-key (kbd "C-S-e") 'end-of-buffer)
+
+;; hooks
+(add-hook 'before-save-hook 'whitespace-cleanup)
