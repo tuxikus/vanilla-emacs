@@ -14,6 +14,10 @@
 (setq inhibit-startup-screen t
       inhibit-startup-message t)
 
+;; line numbers
+(setq display-line-numbers-type 'relative)
+(global-display-line-numbers-mode)
+
 ;; save location in buffer
 (save-place-mode 1)
 
@@ -25,6 +29,9 @@
 
 ;; font
 ;; (add-to-list 'default-frame-alist '(font . "Iosevka Nerd Font-15"))
+
+;; use this code and eval-region to test a font
+;; (set-frame-font "Iosevka Nerd Font-15" nil t)
 
 ;; which key
 ;; (which-key-mode 1)
