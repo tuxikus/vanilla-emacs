@@ -1,7 +1,27 @@
 ;; disable useless ui elements
-(tool-bar-mode -1)
-(menu-bar-mode -1)
-(scroll-bar-mode -1)
+(if (display-graphic-p)
+    (progn
+      (tool-bar-mode -1)
+      (menu-bar-mode -1)
+      (scroll-bar-mode -1)))
+
+;; mode line
+(setq-default mode-line-format
+              (list
+               '(:eval (propertize (format " %s " (buffer-name))
+                                   'face '(:weight bold)))
+               '(:eval (propertize (format " %s " "|")
+                                   'face '(:weight bold)))
+               '(:eval (propertize (format " %s " major-mode)
+                                   'face '(:weight bold)))))
+
+;; move mode line to top
+(setq-default header-line-format mode-line-format)
+(setq-default mode-line-format nil)
+
+;; disable bell
+(setq ring-bell-function 'ignore)
+
 
 ;; dont create backup and lock files
 (setq create-lockfiles nil
@@ -56,6 +76,7 @@
 (global-set-key (kbd "C-x c") 'compile)
 (global-set-key (kbd "C-S-a") 'beginning-of-buffer)
 (global-set-key (kbd "C-S-e") 'end-of-buffer)
+(global-set-key (kbd "M-z") 'zap-up-to-char)
 
 ;; hooks
 (add-hook 'before-save-hook 'whitespace-cleanup)
